@@ -1,0 +1,25 @@
+.grid-numbers {
+  grid-column: 2 / 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+@media (max-width: 700px) {
+  .grid-numbers {
+    grid-column: 1;
+  }
+}
+
+.grid-numbers h3 {
+  font-family: monospace;
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+
+.grid-numbers span {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #E54;
+}

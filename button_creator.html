@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/button-creator/button-creator.css" />
+    <title>Criador de botões</title>
+  </head>
+  <body>
+    <section class="button-creator">
+      <form id="controls" action="#">
+        <label for="text">Texto do botão</label>
+        <input id="text" type="text" name="text">
+        <label for="color">Cor do botão</label>
+        <input type="color" name="color">
+        <label for="background-color">Cor de fundo do botão</label>
+        <input type="color" name="backgroundColor">
+        <label for="height">Altura do botão</label>
+        <input type="range" name="height" min="0" max="200">
+        <label for="width">Largura do botão</label>
+        <input type="range" name="width" min="0" max="600">
+        <label for="border">Borda</label>
+        <input type="text" name="border">
+        <label for="border-radius">Raio (circular) da borda</label>
+        <input id="border-radius" type="range" name="borderRadius" min="0" max="20">
+        <label for="font-family">Fonte do texto</label>
+        <select id="font-family" name="fontFamily">
+          <option value="Arial">Arial</option>
+          <option value="Georgia">Georgia</option>
+          <option value="monospace">monospace</option>
+        </select>
+        <label for="font-size">Tamanho da letra</label>
+        <input id="font-size" type="number" name="fontSize">
+      </form>
+      <section class="button-result">
+        <button class="btn">Clique</button>
+        <pre><code class="css"></code></pre>
+      </section>
+    </section>
+    <script src="js/modules/button-creator/button-creator.js"></script>
+  </body>
+</html>
