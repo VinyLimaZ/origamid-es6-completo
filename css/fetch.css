@@ -1,0 +1,9 @@
+form * {
+    display: block;
+    margin: 10px;
+}
+
+span {
+    display: block;
+    margin: 20px;
+}

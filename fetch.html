@@ -2,10 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <link rel="stylesheet" type="text/css" href="css/fetch.css" />
+  <title>Fetch example</title>
 </head>
 <body>
+  <section>
+    <h3>Valor do bitcoin em BRL: </h3>
+    <span id="bitcoin">Atualizando...</span>
+  </section>
+  <form action="" name="cep">
+    <label for="cep">Digite o CEP:</label>
+    <input id="cep" type="text">
+    <button type="submit">Consultar</button>
+  </form>
+  <span id="address"></span>
 
-  <script src="./js/modules/fetch/fetch.js"></script>
+  <section>
+    <span>Chuck Norris Random Quotes:</span>
+    <span id="chuck"></span>
+    <button id="chuck-random">Surprise me!</button>
+  </section>
+  <script type="module" src="js/modules/fetch/main.js"></script>
 </body>
 </html>
