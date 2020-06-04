@@ -6,7 +6,7 @@ export default function fetchCEPInfo() {
 
     const printSpanAddress = (text) => { spanAddress.innerText = text }
 
-    const fetchCEPAPI = (event) => {
+    const fetchCEPAPI = async (event) => {
         event.preventDefault();
 
         const cepValue = cepInput.value
@@ -14,17 +14,14 @@ export default function fetchCEPInfo() {
         if(cepValue) {
             const viaCEPFetchUrl = viaCEPUrl.replace('${CEP}', cepValue)
 
-            fetch(viaCEPFetchUrl)
-                .then(response => response.json())
-                .then((json) => {
-                    if(json["logradouro"]){
-                        printSpanAddress(json["logradouro"])
-                    } else {
-                        console.log(json)
-                        printSpanAddress('CEP invalido')
-                    }
-                })
+            const response = await fetch(viaCEPFetchUrl)
+            const jsonResponse = await response.json()
 
+            if(jsonResponse["logradouro"]){
+                printSpanAddress(jsonResponse["logradouro"])
+            } else {
+                printSpanAddress('CEP invalido')
+            }
         } else {
             printSpanAddress('Favor consultar o CEP informado!')
         }
