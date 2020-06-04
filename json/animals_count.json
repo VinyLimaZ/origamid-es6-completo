@@ -1,0 +1,19 @@
+[
+    {
+        "type": "wolf",
+        "total": 4983
+    },
+
+    {
+        "type": "fox",
+        "total": 6153
+    },
+    {
+        "type": "squirrel",
+        "total": 92384
+    },
+    {
+        "type": "bear",
+        "total": 283
+    }
+]

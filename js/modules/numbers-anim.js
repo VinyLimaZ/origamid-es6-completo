@@ -1,17 +1,20 @@
-export default function initNumberAnim() {
-    function numbersAnim() {
-        const numbers = document.querySelectorAll('[data-number]');
+import initFetchAnimalsJson  from './fetch-animals-total.js'
 
-        numbers.forEach((number) => {
-            const total = +number.innerText;
+export default function initNumberAnim() {
+    async function numbersAnim() {
+        let animalsJson = await initFetchAnimalsJson();
+
+        animalsJson.forEach((animal) => {
+            const total = +animal.total
             const increment = Math.floor(total / 100);
             let start = 0;
+            const animalNumberSpan = document.querySelector(`[data-number="${animal.type}"]`)
 
             const timer = setInterval(() => {
                 start += increment;
-                number.innerText = start;
+                animalNumberSpan.innerText = start;
                 if(start > total) {
-                    number.innerText = total;
+                    animalNumberSpan.innerText = total;
                     clearInterval(timer);
                 }
             }, 25 * Math.random());
