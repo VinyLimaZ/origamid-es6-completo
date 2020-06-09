@@ -11,7 +11,6 @@ import initNumberAnim          from './modules/numbers-anim.js'
 import initWorkTime            from './modules/work-time.js'
 import initFetchBitcoin        from './modules/fetch-bitcoin.js'
 
-
 initScrollToSection();
 initScrollToRight();
 initAccordion();
