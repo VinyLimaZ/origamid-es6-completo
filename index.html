@@ -15,22 +15,20 @@
         <button data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
         <ul data-menu="list" id="menu">
           <li><a href="#animals">Animais</a></li>
-          <li data-dropdown>
-            <a href="sobre.html">Sobre</a>
-            <ul class="dropdown-menu">
-              <li><a href="empresa.html">Empresa</a></li>
-              <li><a href="equipe.html">Equipe</a></li>
-              <li><a href="socios.html">Socios</a></li>
-              <li><a href="investidores.html">Investidores</a></li>
-            </ul>
-          </li>
+          <li><a href="sobre.html">Sobre</a></li>
           <li><a href="#faq">Faq</a></li>
           <li><a href="#contact">Contato</a></li>
           <li><a data-modal="open" href="login.html">Login</a></li>
-          <li><a href="form.html">Plain form</a></li>
-          <li><a href="button_creator.html">Criador de botões</a></li>
-          <li><a href="fetch.html">Exercicio sobre Fetch</a></li>
-          <li><a data-cron="show" href="#">Mostrar cronometro</a></li>
+          <li data-dropdown>
+            <a href="">Exercicios</a>
+            <ul class="dropdown-menu">
+              <li><a data-dropdown="link" href="form.html">Plain form</a></li>
+              <li><a data-dropdown="link" href="button_creator.html">Criador de botões</a></li>
+              <li><a data-dropdown="link" href="fetch.html">Exercicio sobre Fetch</a></li>
+              <li><a data-dropdown="link" data-cron="show" href="">Mostrar cronometro</a></li>
+              <li><a data-dropdown="link" href="clean-cpf.html">Clean CPF</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
 

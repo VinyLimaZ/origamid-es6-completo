@@ -9,8 +9,10 @@ export default function initDropdownMenu(){
     })
 
     function handleClick(event) {
-        event.preventDefault();
-        this.classList.add('active')
+        if(event.target.dataset.dropdown != 'link') {
+            event.preventDefault();
+            this.classList.add('active')
+        }
 
         outsideClick(this, userEvents, () => {
             this.classList.remove('active');
